@@ -3,8 +3,8 @@ agent any
 stages {
 stage('Provision infrastructure') {
  steps {
-   sh '/usr/local/bin/terraform init'
-   sh '/usr/local/bin/terraform plan -out=plan'
+   sh 'D:\Shashank\terraform init'
+   sh 'D:\Shashank\terraform plan -out=plan'
 
  }
 }
