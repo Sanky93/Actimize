@@ -3,9 +3,8 @@ agent any
 stages {
 stage('Provision infrastructure') {
  steps {
-   sh 'D:\Shashank\terraform init'
-   sh 'D:\Shashank\terraform plan -out=plan'
-
+   bat label: '', script: 'terraform init'
+   bat label: '', script: 'terraform plan -out=plan'
  }
 }
   stage('Approval') {
