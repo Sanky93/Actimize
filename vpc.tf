@@ -13,7 +13,7 @@ cidr_block="10.0.0.192/26"
 vpc_id="${aws_vpc.sample_vpc.id}"
 availability_zone="us-east-1a"
 }
-
+/*
 resource "aws_internet_gateway" "igw"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 }
@@ -85,7 +85,7 @@ tags = {
     name = "SUBNET4"
   }
 }*/
- 
+/* 
 resource "aws_eip" "nat" {
   vpc=true
   }
@@ -97,7 +97,7 @@ resource "aws_nat_gateway" "gw" {
     Name = "gw NAT"
   }
 }
-
+*/
 resource "aws_security_group" "sgrp2" {
   name="sgrp2"
   vpc_id = "${aws_vpc.sample_vpc.id}"
@@ -135,7 +135,7 @@ resource "aws_security_group" "sgrp2" {
     name = "SECURITYGRP2"
 }
 }
-
+/*
 resource "aws_security_group" "sgrp1"{
 name="sgrp1"
 vpc_id="${aws_vpc.sample_vpc.id}"
@@ -169,7 +169,7 @@ tags = {
 }
 }
 
-
+*/
 
 
 
