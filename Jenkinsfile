@@ -2,6 +2,15 @@ pipeline {
 agent any
 stages {
 
+stage(‘Set Terraform path’) {
+ steps {
+ script {
+ def tfHome = tool name: ‘Terraform’
+ env.PATH = “${tfHome}:${env.PATH}”
+ }
+ }
+}
+
 stage('Provision infrastructure') {
  steps {
    bat label: '', script: 'terraform init'
