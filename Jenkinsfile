@@ -17,7 +17,7 @@ stage('Provision infrastructure') {
 stage('TF Apply') {
       steps {
         
-          sh '/usr/local/bin/terraform apply plan'
+          bat label: '', script: 'terraform apply plan'
         
       }
     }
