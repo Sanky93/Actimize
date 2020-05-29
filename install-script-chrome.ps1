@@ -1,7 +1,7 @@
 clear
  
 # URL Parameter
-$WebURL = "https://installationpackages.s3.ap-south-1.amazonaws.com/ChromeSetup.exe"
+$WebURL = "https://actimizepoc.s3.amazonaws.com/ChromeSetup.exe"
   
 # Directory Parameter
 $FileDirectory = "$($env:USERPROFILE)$("\downloads\")"

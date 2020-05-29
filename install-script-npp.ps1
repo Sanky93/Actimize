@@ -1,7 +1,7 @@
 clear
  
 # URL Parameter
-$WebURL = "https://installationpackages.s3.ap-south-1.amazonaws.com/npp.7.8.6.Installer.x64.exe"
+$WebURL = "https://actimizepoc.s3.amazonaws.com/npp.7.8.6.Installer.x64.exe"
   
 # Directory Parameter
 $FileDirectory = "$($env:USERPROFILE)$("\downloads\")"
