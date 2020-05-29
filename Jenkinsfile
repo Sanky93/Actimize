@@ -1,10 +1,12 @@
 pipeline {
 agent any
 stages {
+
 stage('Provision infrastructure') {
  steps {
    bat label: '', script: 'terraform init'
-   bat label: '', script: 'terraform plan -out=plan'
+  bat label: '', script: 'terraform plan -out=plan'
+
  }
 }
   stage('Approval') {
@@ -23,4 +25,3 @@ stage('TF Apply') {
     }
 }
 }
- 
