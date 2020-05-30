@@ -97,7 +97,7 @@ resource "aws_nat_gateway" "gw" {
     Name = "gw NAT"
   }
 }
-*/
+
 resource "aws_security_group" "sgrp2" {
   name="sgrp2"
   vpc_id = "${aws_vpc.sample_vpc.id}"
@@ -135,7 +135,7 @@ resource "aws_security_group" "sgrp2" {
     name = "SECURITYGRP2"
 }
 }
-/*
+*/
 resource "aws_security_group" "sgrp1"{
 name="sgrp1"
 vpc_id="${aws_vpc.sample_vpc.id}"
@@ -169,7 +169,6 @@ tags = {
 }
 }
 
-*/
 
 
 
