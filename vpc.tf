@@ -13,7 +13,7 @@ cidr_block="10.0.0.192/26"
 vpc_id="${aws_vpc.sample_vpc.id}"
 availability_zone="us-east-1a"
 }
-/*
+
 resource "aws_internet_gateway" "igw"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 }
@@ -25,7 +25,7 @@ cidr_block="0.0.0.0/0"
 gateway_id="${aws_internet_gateway.igw.id}"
 }
 }
-
+/*
 resource "aws_route_table" "rtbl1"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 route{
