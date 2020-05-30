@@ -19,6 +19,7 @@ net user ${var.INSTANCE_USERNAME} /add /y
 net user ${var.INSTANCE_USERNAME} ${var.INSTANCE_PASSWORD}
 net localgroup administrators ${var.INSTANCE_USERNAME} /add
 echo ${base64encode(file("/var/lib/jenkins/workspace/Actimize/install-script-chrome.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-chrome.ps1
+echo ${base64encode(file("/var/lib/jenkins/workspace/Actimize/install-script-Java.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-Java.ps1
 echo ${base64encode(file("/var/lib/jenkins/workspace/Actimize/install-script-npp.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-npp.ps1
 powershell.exe -file "C:\setup-scripts\install-script-chrome.ps1"
 powershell.exe -file "C:\setup-scripts\install-script-Java.ps1"
@@ -28,7 +29,7 @@ echo "" > _INIT_COMPLETE_
 <persist>false</persist>
 EOF
 }
-/*echo ${base64encode(file("/var/lib/jenkins/workspace/Terraform_AWS_Demo/install-script-Java.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-Java.ps1
+/*
 resource "aws_instance" "pubserver2" {
   ami                    = "${var.ami}"
   instance_type          = "${var.inst_type}"
