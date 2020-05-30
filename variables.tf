@@ -50,3 +50,7 @@ default="lavender1"
 
 variable "INSTANCE_USERNAME" { default = "admin" } 
 variable "INSTANCE_PASSWORD" { }
+
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "mykey"
+}
