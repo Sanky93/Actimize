@@ -1,3 +1,4 @@
+/*
 resource "aws_db_subnet_group" "demo_subntgrp"{
 name="demo_subntgrp"
 subnet_ids=["${aws_subnet.subnet3.id}","${aws_subnet.subnet2.id}"]
@@ -19,3 +20,4 @@ tags = {
     name = "RDS"
 }
 } 
+*/
