@@ -1,7 +1,3 @@
-resource "aws_key_pair" "mykey" {
-  key_name   = "mykey"
-  public_key = file(var.PATH_TO_PUBLIC_KEY)
-}
 
 resource "aws_instance" "pubserver1" {
   ami                         = "${var.ami}"
@@ -9,7 +5,7 @@ resource "aws_instance" "pubserver1" {
   subnet_id                   = "${aws_subnet.public-sub.id}"
   user_data                   = data.template_file.userdata_win.rendered
   vpc_security_group_ids      = ["${aws_security_group.sgrp2.id}"]
-  key_name                    = "${aws_key_pair.mykey.key_name}"
+  key_name                    = "ShashankTF"
   associate_public_ip_address = "true"
 }
 
